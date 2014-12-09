@@ -1,0 +1,73 @@
+@charset "UTF-8";
+
+.home-thumb-wrapper {
+    width: 89.0625%;
+    margin: 0 auto;
+}
+@media (max-width: 760px) {
+    .home-thumb-wrapper {
+        width: 88%;
+    }
+}
+.thumb-border {
+    width: 100%;
+    height: 100%;
+}
+.thumb-details-border {
+    width: 100%;
+    height: 100%;
+}
+
+.spots-module h4 {
+  margin-left: 9.1334895%; }
+.spots-module .thumb {
+  display: inline-block;
+  width: 31.5789474%;
+  margin: 0 .877193% 1.754386% .877193%;
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.04); }
+  .spots-module .thumb:first-child {
+    width: 64.9122807%;
+    overflow: hidden;
+    position: relative;
+    float: left; }
+    .spots-module .thumb:first-child .thumb-details {
+      padding-right: 15px; }
+    .spots-module .thumb:first-child img {
+      width: 101.4%; }
+@media (max-width: 1440px) {
+  .spots-module .thumb {
+    width: 48.245614%; }
+    .spots-module .thumb:first-child {
+      width: 98.245614%; }
+      .spots-module .thumb:first-child img {
+        width: 100%; } }
+@media (max-width: 760px) {
+  .spots-module {
+    padding-top: 6%;
+    border-top: 1px solid #E6E6E6;
+    background-color: #F8F8F8; }
+    .spots-module h4 {
+      margin-left: 5.875%; }
+    .spots-module .thumb {
+      margin: 0 0 6% 0;
+      width: 100%; }
+      .spots-module .thumb:first-child {
+        width: 100%; } }
+
+        .map-fav {
+  width: 47.6449275%;
+  background-image: url(/sloth/assets/jerkomlette.png); }
+  .map-fav .thumb-border {
+    border: 12px solid rgba(204, 204, 204, 0.25); }
+  .map-fav .thumb-details-border, .map-fav .thumb-details {
+    border: 1px solid #CCCCCC; }
+  .map-fav:hover .thumb-border {
+    border: 12px solid rgba(153, 153, 153, 0.25); }
+  .map-fav:hover .thumb-details-border, .map-fav:hover .thumb-details {
+    border: 1px solid #B3B3B3; }
+  @media (max-width: 1000px) {
+    .map-fav {
+      width: 48.245614%; } }
+  @media (max-width: 760px) {
+    .map-fav {
+      width: 100%; } }
