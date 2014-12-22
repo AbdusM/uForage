@@ -270,8 +270,9 @@ a:focus {
 .download-section {
     width: 100%;
     padding: 50px 0;
+    opacity:1;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/sunset.png) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -504,4 +505,10 @@ figure {
 
 figure {
   margin: 0;
+}
+
+.weather {
+    position: relative;
+    z-index: 44px;
+    background-color: #21B6A8;
 }

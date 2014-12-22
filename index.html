@@ -95,7 +95,7 @@
 
     <!-- Vendor Section -->
     <section id="vendors" class="container content-section text-center">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
 
                 <!-- PORTFOLIO IMAGE 1 -->
@@ -123,66 +123,35 @@
                             <figcaption>
                                 <h5>UI DESIGN</h5>
                                 <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption><!-- /figcaption -->
-                        </figure><!-- /figure -->
-                    </div><!-- /grid-mask -->
-                </div><!-- /col -->
-                
-                <!-- PORTFOLIO IMAGE 3 -->
-                <div class="col-md-4">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="assets/img/portfolio/folio03.jpg" alt="">
-                            <figcaption>
-                                <h5>ANDROID PAGE</h5>
-                                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption><!-- /figcaption -->
-                        </figure><!-- /figure -->
-                    </div><!-- /grid-mask -->
-                </div><!-- /col -->
-            </div><!-- /row -->
+                            </figcaption>
+                            <!-- /figcaption -->
+                        </figure>
+                        <!-- /figure -->
+                    </div>
+                    <!-- /grid-mask -->
+                </div>
+                <!-- /col -->
 
-                <!-- PORTFOLIO IMAGE 4 -->
-            <div class="row">   
-                <div class="col-md-4 ">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="assets/img/portfolio/folio04.jpg" alt="">
-                            <figcaption>
-                                <h5>PROFILE</h5>
-                                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption><!-- /figcaption -->
-                        </figure><!-- /figure -->
-                    </div><!-- /grid-mask -->
-                </div><!-- /col -->
-                
-                <!-- PORTFOLIO IMAGE 5 -->
+                <!-- Twitter Embed -->
                 <div class="col-md-4">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="assets/img/portfolio/folio05.jpg" alt="">
-                            <figcaption>
-                                <h5>TWITTER STATUS</h5>
-                                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption><!-- /figcaption -->
-                        </figure><!-- /figure -->
-                    </div><!-- /grid-mask -->
-                </div><!-- /col -->
-                
-                <!-- PORTFOLIO IMAGE 6 -->
-                <div class="col-md-4">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="assets/img/portfolio/folio06.jpg" alt="">
-                            <figcaption>
-                                <h5>PHONE MOCKUP</h5>
-                                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption><!-- /figcaption -->
-                        </figure><!-- /figure -->
-                    </div><!-- /grid-mask -->
-                </div><!-- /col -->
-            </div><!-- /row -->
+                    <a class="twitter-timeline" href="https://twitter.com/ForagePhilly" data-widget-id="462270929184100352">Tweets by @ForagePhilly</a>
+                    <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + "://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                    </script>
+                </div>
+                <!-- /col -->
             </div>
+            <!-- /row -->
+        </div>
         </div>
     </section>
     <!-- Weather Section -->
@@ -204,8 +173,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-3">
-                    <a href="#">
-                        <img src="http://placehold.it/800x600" class="thumbnail img-responsive">
+                    <a href="http://www.codeforphilly.org">
+                        <img src="img/codeforphilly.png" class="thumbnail img-responsive" alt="Code For Philly - Co Working Space">
                     </a>
                 </div>
                 <div class="col-xs-3">
@@ -345,12 +314,12 @@
     </section>
 
     <!-- Map Section -->
-    <div id="map"></div>
+    <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=39.954781&lon=-75.183515&name=Philadelphia&color=#6C2DC7"> </iframe>
 
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
+            <p>Copyright &copy; uForage LLC 2014</p>
         </div>
     </footer>
 
