@@ -29,6 +29,24 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+var $filter = $('[data-filter]');
+$('div.filter-options > select').on('change', function(e) {
+    var filterValue = $(this).val();
+    
+    $filter.each(function() {
+        var $self = $(this);
+        
+        if (filterValue == 'none') {
+            $self.show();
+        }else{
+            if ($self.attr('data-filter') != filterValue) {
+                $self.hide();
+            }else{
+                $self.show();
+            }
+        }
+    });
+});
 // Google Maps Scripts
 // When the window has finished loading create our google map below
 google.maps.event.addDomListener(window, 'load', init);
@@ -176,3 +194,4 @@ function init() {
         icon: image
     });
 }
+
