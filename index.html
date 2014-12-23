@@ -98,41 +98,6 @@
     <section id="vendors" class="container content-section text-center">
         <div class="container-fluid">
             <div class="row">
-
-                <!-- PORTFOLIO IMAGE 1 -->
-                <div class="col-md-4 ">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="img/mtairyfestival.jpg" alt="">
-                            <figcaption>
-                                <h5>DASHBOARD</h5>
-                                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption>
-                            <!-- /figcaption -->
-                        </figure>
-                        <!-- /figure -->
-                    </div>
-                    <!-- /grid-mask -->
-                </div>
-                <!-- /col -->
-
-                <!-- PORTFOLIO IMAGE 2 -->
-                <div class="col-md-4">
-                    <div class="grid mask">
-                        <figure>
-                            <img class="img-responsive" src="assets/img/portfolio/folio02.jpg" alt="">
-                            <figcaption>
-                                <h5>UI DESIGN</h5>
-                                <a data-toggle="modal" href="#myModal" class="btn btn-primary btn-lg">Take a Look</a>
-                            </figcaption>
-                            <!-- /figcaption -->
-                        </figure>
-                        <!-- /figure -->
-                    </div>
-                    <!-- /grid-mask -->
-                </div>
-                <!-- /col -->
-
                 <!-- Twitter Embed -->
                 <div class="col-md-4">
                     <a class="twitter-timeline" href="https://twitter.com/ForagePhilly" data-widget-id="462270929184100352">Tweets by @ForagePhilly</a>
@@ -465,6 +430,29 @@
                 </container>
             </section>
 
+            <div id='messagesDiv'></div>
+    <input type='text' id='nameInput' placeholder='Name'>
+    <input type='text' id='messageInput' placeholder='Message'>
+    <script>
+      var myDataRef = new Firebase('https://ghf7om6x5de.firebaseio-demo.com/');
+      $('#messageInput').keypress(function (e) {
+        if (e.keyCode == 13) {
+          var name = $('#nameInput').val();
+          var text = $('#messageInput').val();
+          myDataRef.push({name: name, text: text});
+          $('#messageInput').val('');
+        }
+      });
+      myDataRef.on('child_added', function(snapshot) {
+        var message = snapshot.val();
+        displayChatMessage(message.name, message.text);
+      });
+      function displayChatMessage(name, text) {
+        $('<div/>').text(text).prepend($('<em/>').text(name+': ')).appendTo($('#messagesDiv'));
+        $('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+      };
+    </script>
+
             <!-- Map Section -->
             <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=39.954781&lon=-75.183515&name=Philadelphia&color=#6C2DC7"> </iframe>
 
@@ -474,7 +462,7 @@
                     <p>Copyright &copy; uForage LLC 2014</p>
                 </div>
             </footer>
-
+        
             <!-- jQuery Version 1.11.0 -->
             <script src="js/jquery-1.11.0.js"></script>
 
@@ -483,6 +471,10 @@
 
             <!-- Plugin JavaScript -->
             <script src="js/jquery.easing.min.js"></script>
+
+            <!-- Firebase JS -->
+            <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+             <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
             <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
             <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
